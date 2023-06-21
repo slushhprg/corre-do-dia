@@ -1,0 +1,241 @@
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 800px){
+
+    /* Header Section */
+    
+    .header{
+        justify-content: space-between;
+        background-color: #fff;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .logo{
+        margin-left: 1.5rem;
+    }
+    .logo img{
+        width: 7rem;
+    }
+    #menu{
+        display: block;
+        position: fixed;
+        width: 80%;
+        top: 4.3rem;
+        right: 0px;
+        background-color: #fff;
+        height: 0px;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        z-index: 1000 ; 
+    }
+    #menu.ativo{
+        background-color: #fff;
+    }
+    #nav.active #menu{
+        height: calc(100% - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        display: block;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        align-items: center;
+        font-size: 1.3rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    #hamburguer{
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+        color: #000;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+
+    }
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -0.4375rem;
+    }
+
+    /* Main Section */
+    .section-1{
+        background-image: none;
+    }
+    .main-container{
+        height: 50rem;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .container-1{
+        width: 20rem;
+        height: 20rem;
+    }
+    .container-1-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-1 h1{
+        width: 20rem;
+        font-size: 1.7rem;
+    }
+    .container-1 p{
+        width: 20rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .container-1 a{
+        width: 13rem;
+        height: 4rem;
+        border-radius: 5px;
+        margin-top: 3rem;
+    }
+    .main-container-img{
+        display: block;
+    }
+    .main-img{
+        width: 20rem;
+    }
+
+    /* Section 2 */
+
+    .section-2{
+        height: 60rem;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .section-2-content{
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .section-2-tittle{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .section-2-subtittle{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .section-2-img{
+        width: 20rem;
+    }
+    
+    /* section 3 */
+
+    .section-3{
+        height: 90rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .section-3-tittle{
+        font-size: 2rem;
+    }
+    .section-3-subtittle{
+        width: 20rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .areas-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .area{
+        width: 18rem;
+        height: 18rem;
+        gap: 1rem;
+    }
+    .area-logo{
+        width: 5rem;
+    }
+    .area-tittle{
+        font-size: 1.5rem;
+    }
+    .area-resume{
+        width: 16rem;
+        font-size: 1rem;
+    }
+
+
+
+    /* Modal */
+    
+    .modal{
+        width: 80%;
+        height: 75%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .modal-tittle h1{
+        font-size: 1.5rem;
+    }
+    .input-tittles{
+        font-size: 1rem;
+    }
+    .modal-tittle h3{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .modal-form{
+        width: 100%;
+        gap: 1rem;
+    }
+    .form-and-tittle{
+        gap: .5rem;
+    }
+    .form{
+        font-size: .7rem;
+    }
+    .form i{
+        margin-left: .7rem;
+    }
+    .form input{
+        height: 4rem;
+        font-size: .7rem;
+    }
+    .create-account{
+        width: 12rem;
+        height: 3rem;
+        font-size: .9rem;
+    }
+    .create-account:hover{
+        background-color: #13388a;
+    }
+    .modal-login{
+        text-align: center;
+        font-size: .8rem;
+        font-weight: 100;
+    }
+    .modal-login a{
+        color: #4164B3;
+    }
+}
